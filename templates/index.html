@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Iris Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Iris Classifier</h1>
+    <p class="subtitle">Enter flower measurements to predict the Iris species.</p>
+
+    {% if error %}
+      <div class="alert">{{ error }}</div>
+    {% endif %}
+
+    <form action="{{ url_for('predict') }}" method="post" class="card">
+      <label>
+        Sepal Length
+        <input type="number" name="sepal_length" step="0.01" required placeholder="e.g. 5.1" />
+      </label>
+
+      <label>
+        Sepal Width
+        <input type="number" name="sepal_width" step="0.01" required placeholder="e.g. 3.5" />
+      </label>
+
+      <label>
+        Petal Length
+        <input type="number" name="petal_length" step="0.01" required placeholder="e.g. 1.4" />
+      </label>
+
+      <label>
+        Petal Width
+        <input type="number" name="petal_width" step="0.01" required placeholder="e.g. 0.2" />
+      </label>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
