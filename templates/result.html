@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Prediction Result</h1>
+
+    <div class="card">
+      <p class="result">
+        Predicted Species:
+        <strong>{{ label|capitalize }}</strong>
+        {% if confidence is not none %}
+          <span class="muted">({{ confidence }}% confidence)</span>
+        {% endif %}
+      </p>
+
+      <h3>Inputs</h3>
+      <ul class="inputs">
+        <li>Sepal Length: <strong>{{ inputs.sepal_length }}</strong></li>
+        <li>Sepal Width: <strong>{{ inputs.sepal_width }}</strong></li>
+        <li>Petal Length: <strong>{{ inputs.petal_length }}</strong></li>
+        <li>Petal Width: <strong>{{ inputs.petal_width }}</strong></li>
+      </ul>
+
+      <a class="link" href="{{ url_for('index') }}">← Make another prediction</a>
+    </div>
+  </div>
+</body>
+</html>
