@@ -1,0 +1,105 @@
+:root {
+    --bg: #0f172a;        /* slate-900 */
+    --card: #111827;      /* gray-900 */
+    --muted: #94a3b8;     /* slate-400 */
+    --text: #e5e7eb;      /* gray-200 */
+    --accent: #6366f1;    /* indigo-500 */
+    --danger: #ef4444;    /* red-500 */
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
+    background: linear-gradient(135deg, #0b1020, #0f172a);
+    color: var(--text);
+  }
+  
+  .container {
+    max-width: 720px;
+    margin: 48px auto;
+    padding: 0 16px;
+  }
+  
+  h1 {
+    margin: 0 0 12px 0;
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    background: #0b1220;
+    color: var(--text);
+    outline: none;
+  }
+  
+  input[type="number"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+  }
+  
+  button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  button:hover { filter: brightness(1.05); }
+  
+  .alert {
+    background: #1f2937;
+    border-left: 4px solid var(--danger);
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .result {
+    font-size: 18px;
+    margin: 0 0 16px 0;
+  }
+  
+  .muted { color: var(--muted); }
+  
+  .inputs {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 16px 0;
+  }
+  
+  .link {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .link:hover { text-decoration: underline; }
+  
